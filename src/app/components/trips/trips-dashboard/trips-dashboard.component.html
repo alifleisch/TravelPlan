@@ -1,0 +1,10 @@
+<div>
+    <h1>Trips Dashboard</h1>
+    <ul>
+        <li *ngFor="let trip of trips">
+            <h3>{{ trip.name }}</h3>
+            <p>Location: {{ trip.location }}</p>
+            <p>Date: {{ trip.date }}</p>
+        </li>
+    </ul>
+</div>

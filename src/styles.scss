@@ -6,18 +6,12 @@ $TravelPlan-theme: mat.define-theme((color: (theme-type: light,
         tertiary: mat.$blue-palette,
       ),
       density: (scale: 0,
-      )));
+      ),
+    ));
 
 :root {
   @include mat.all-component-themes($TravelPlan-theme);
 }
-
-// Comment out the line below if you want to use the pre-defined typography utility classes.
-// For more information: https://material.angular.io/guide/typography#using-typography-styles-in-your-application.
-// @include mat.typography-hierarchy($TravelPlan-theme);
-
-// Comment out the line below if you want to use the deprecated `color` inputs.
-// @include mat.color-variants-backwards-compatibility($TravelPlan-theme);
 
 html,
 body {
@@ -37,120 +31,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-
-}
-
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-}
-
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  text-shadow: 1px 1px 10px #401000;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-
-.nav-links li {
-  display: inline;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem 1rem;
-  position: relative;
-  transition: transform 0.3s, color 0.3s;
-}
-
-.nav-links a::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #F2962F;
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
-}
-
-.nav-links a:hover::before {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-.nav-links a.active {
-  color: #DB6851;
-  border-bottom: 2px solid #DB6851;
-}
-
-.auth-buttons .login-btn,
-.auth-buttons .signup-btn {
-  text-decoration: none;
-  color: white;
-  border: 1px solid white;
-  padding: 0.5rem 1rem;
-  border-radius: 5px;
-  margin-left: 1rem;
-  transition: background-color 0.3s, border-color 0.3s;
-}
-
-.login-btn:hover {
-  background-color: #F2962F;
-  border-color: #F2962F;
-}
-
-.signup-btn {
-  background-color: #DB6851;
-  border-color: #DB6851;
-}
-
-.signup-btn:hover {
-  background-color: #F2962F;
-  border-color: #F2962F;
-}
-
-.burger-menu {
-  display: none;
-  cursor: pointer;
-}
-
-.burger-menu span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 5px 0;
-}
-
-.hero-section {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-}
-
-.hero-content h1 {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
-  text-shadow: 1px 1px 25px rgba(30, 30, 30, 0.4);
-}
-
-.hero-content p {
-  font-size: 1.3rem;
-  margin-bottom: 2.5rem;
 }
 
 .cta-buttons .btn {
@@ -166,10 +46,13 @@ body {
 .primary-btn {
   background-color: #DB6851;
   color: white;
+  box-shadow: 1px 3px 5px #101000;
 }
 
 .primary-btn:hover {
   background-color: #F2962F;
+  box-shadow: 1px 3px 10px #101000;
+  scale: 1.01;
 }
 
 .secondary-btn {
@@ -181,6 +64,7 @@ body {
 .secondary-btn:hover {
   background-color: white;
   color: #00C0C3;
+  box-shadow: 1px 3px 10px #101000;
 }
 
 @media (max-width: 768px) {

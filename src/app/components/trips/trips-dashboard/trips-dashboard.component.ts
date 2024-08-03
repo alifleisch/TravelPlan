@@ -20,4 +20,10 @@ export class TripsDashboardComponent implements OnInit {
       this.trips = data;
     });
   }
+  scrollToDashboard() {
+    const element = document.getElementById('dashboard');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

@@ -1,5 +1,14 @@
 <div>
-    <h1>Trips Dashboard</h1>
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Plan Your Perfect Trip</h1>
+            <p>Organize your travel, accommodations, bookings, and expenses all in one place</p>
+            <div class="cta-buttons">
+                <button class="btn primary-btn" (click)="scrollToDashboard()">Get Started</button>
+            </div>
+        </div>
+    </section>
+    <h1 id="dashboard">Trips Dashboard</h1>
     <ul>
         <li *ngFor="let trip of trips">
             <h3>{{ trip.name }}</h3>

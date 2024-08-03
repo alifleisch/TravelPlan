@@ -9,11 +9,11 @@
         </div>
     </section>
     <h1 id="dashboard">Trips Dashboard</h1>
-    <ul>
-        <li *ngFor="let trip of trips">
+    <div class="trips-grid">
+        <div class="trip-card" *ngFor="let trip of trips">
             <h3>{{ trip.name }}</h3>
-            <p>Location: {{ trip.location }}</p>
-            <p>Date: {{ trip.date }}</p>
-        </li>
-    </ul>
+            <p><strong>Location:</strong> {{ trip.location }}</p>
+            <p><strong>Date:</strong> {{ trip.date }}</p>
+        </div>
+    </div>
 </div>

@@ -7,6 +7,7 @@ import { TransportComponent } from './components/transport/transport.component';
 import { AccommodationsComponent } from './components/accommodations/accommodations.component';
 import { TripsDashboardComponent } from './components/trips/trips-dashboard/trips-dashboard.component';
 import { UserProfileComponent } from './components/profile/profile.component';
+import { AppComponent } from './app.component';
 
 export const routes: Routes = [
     { path: 'trips', component: TripsDashboardComponent },

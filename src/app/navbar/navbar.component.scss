@@ -3,18 +3,28 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
+    position: relative;
 }
 
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    text-shadow: 1px 3px 10px #101000;
+    text-shadow: 1px 3px 10px #002023;
+    cursor: pointer;
+}
+
+.menu-container {
+    position: relative;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+}
+
+.nav-links.active {
+    display: flex;
 }
 
 .nav-links li {
@@ -29,6 +39,8 @@
     position: relative;
     transition: transform 0.3s ease, color 0.3s ease;
     cursor: pointer;
+    text-shadow: 1px 1px 20px rgb(0, 70, 91);
+    white-space: nowrap;
 }
 
 .nav-links a::before {
@@ -36,7 +48,7 @@
     position: absolute;
     width: 100%;
     height: 2px;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     background-color: #F2962F;
     visibility: hidden;
@@ -50,18 +62,20 @@
 }
 
 .nav-links a.active {
-    color: #DB6851;
-    border-bottom: 2px solid #DB6851;
+    color: #fdc5b9;
+    border-bottom: 2px solid #fdc5b9;
+    width: 100%;
 }
 
-.auth-buttons .login-btn,
-.auth-buttons .signup-btn {
+.login-btn,
+.signup-btn {
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     margin-left: 1rem;
     transition: background-color 0.3s, border-color 0.3s;
-    box-shadow: 1px 3px 5px #101000;
+    box-shadow: 0px 2px 5px #505050;
+    white-space: nowrap;
 }
 
 .login-btn {
@@ -86,6 +100,8 @@
 .burger-menu {
     display: none;
     cursor: pointer;
+    position: relative;
+    z-index: 1100;
 }
 
 .burger-menu span {
@@ -94,4 +110,43 @@
     height: 3px;
     background-color: white;
     margin: 5px 0;
+}
+
+@media (max-width: 1000px) {
+    .nav-links {
+        display: none;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 600%;
+        background-color: #009fb0;
+        padding: 1rem;
+        flex-direction: column;
+        box-shadow: 0px 2px 5px #505050;
+        z-index: 1100;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: block;
+    }
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 900;
+}
+
+.overlay.active {
+    display: block;
 }

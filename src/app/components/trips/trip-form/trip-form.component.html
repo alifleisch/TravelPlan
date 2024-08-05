@@ -1,1 +1,18 @@
-<p>trip-form works!</p>
+<div class="trip-form">
+    <h2>Create New Trip</h2>
+    <form (ngSubmit)="submitForm()" #tripForm="ngForm">
+        <div>
+            <label for="name">Trip Name:</label>
+            <input id="name" name="name" [(ngModel)]="newTrip.name" required>
+        </div>
+        <div>
+            <label for="location">Location:</label>
+            <input id="location" name="location" [(ngModel)]="newTrip.location" required>
+        </div>
+        <div>
+            <label for="date">Date:</label>
+            <input id="date" name="date" [(ngModel)]="newTrip.date" required type="date">
+        </div>
+        <button type="submit" class="btn primary-btn">Add Trip</button>
+    </form>
+</div>

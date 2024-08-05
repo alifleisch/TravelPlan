@@ -9,6 +9,8 @@
         </div>
     </section>
     <h1 id="dashboard">Trips Dashboard</h1>
+    <button class="btn create-trip-btn" (click)="toggleForm()">Create New Trip</button>
+    <app-trips-form *ngIf="isFormVisible" (tripCreated)="addTrip($event)"></app-trips-form>
     <div class="trips-grid">
         <div class="trip-card" *ngFor="let trip of trips">
             <h3>{{ trip.name }}</h3>

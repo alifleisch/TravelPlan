@@ -9,7 +9,7 @@
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    text-shadow: 1px 3px 10px #002023;
+    text-shadow: 1px 1px 15px #002023;
     cursor: pointer;
 
     a {
@@ -58,8 +58,8 @@
         white-space: nowrap;
 
         &.active {
-            color: #fdc5b9;
-            border-bottom: 2px solid #fdc5b9;
+            color: white;
+            border-bottom: 2px solid white;
         }
     }
 }

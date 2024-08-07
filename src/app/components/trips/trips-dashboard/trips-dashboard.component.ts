@@ -35,8 +35,15 @@ export class TripsDashboardComponent implements OnInit {
   }
 
   addTrip(newTrip: any) {
-    this.trips.push(newTrip); // добавляем новую поездку в локальный массив
-    this.isFormVisible = false;
-    // TODO: Здесь нужно сделать запрос на сервер для добавления поездки
+    this.tripService.createTrip(newTrip).subscribe({
+      next: (trip) => {
+        this.trips.unshift(trip);
+        this.isFormVisible = false;
+        console.log('New trip has added: ', trip);
+      },
+      error: (error) => {
+        console.error('Error creating trip:', error);
+      }
+    });
   }
 }

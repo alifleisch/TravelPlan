@@ -9,7 +9,9 @@
         </div>
     </section>
     <h1 id="dashboard">Trips Dashboard</h1>
-    <button class="btn create-trip-btn" (click)="toggleForm()">Create New Trip</button>
+    <div class="cta-buttons">
+        <button class="btn secondary-btn" (click)="toggleForm()">Create New Trip</button>
+    </div>
     <app-trips-form *ngIf="isFormVisible" (tripCreated)="addTrip($event)"></app-trips-form>
     <div class="trips-grid">
         <div class="trip-card" *ngFor="let trip of trips">

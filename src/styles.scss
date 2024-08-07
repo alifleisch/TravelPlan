@@ -11,6 +11,7 @@ $TravelPlan-theme: mat.define-theme((color: (theme-type: light,
 
 :root {
   @include mat.all-component-themes($TravelPlan-theme);
+  --mdc-filled-text-field-container-color: rgb(226, 235, 235);
 }
 
 html,
@@ -56,14 +57,16 @@ body {
 }
 
 .secondary-btn {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
+  background-color: white;
+  color: #DB6851;
+  box-shadow: 0px 3px 10px #505050;
+  border-radius: 30px !important;
+
 }
 
 .secondary-btn:hover {
-  background-color: white;
-  color: #00C0C3;
+  background-color: #F2962F;
+  color: white;
   box-shadow: 1px 3px 10px #101000;
 }
 

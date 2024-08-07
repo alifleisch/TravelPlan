@@ -1,18 +1,21 @@
-<div class="trip-form">
-    <h2>Create New Trip</h2>
-    <form (ngSubmit)="submitForm()" #tripForm="ngForm">
-        <div>
-            <label for="name">Trip Name:</label>
-            <input id="name" name="name" [(ngModel)]="newTrip.name" required>
-        </div>
-        <div>
-            <label for="location">Location:</label>
-            <input id="location" name="location" [(ngModel)]="newTrip.location" required>
-        </div>
-        <div>
-            <label for="date">Date:</label>
-            <input id="date" name="date" [(ngModel)]="newTrip.date" required type="date">
-        </div>
-        <button type="submit" class="btn primary-btn">Add Trip</button>
-    </form>
-</div>
+<form class="trip-form" (ngSubmit)="submitForm()">
+    <h5>Add a New Trip</h5>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="newTrip.name" name="name" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Location</mat-label>
+        <input matInput [(ngModel)]="newTrip.location" name="location" required>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+        <mat-label>Date</mat-label>
+        <input matInput [(ngModel)]="newTrip.date" name="date" required>
+    </mat-form-field>
+
+    <button mat-raised-button class="primary-btn" type="submit">Add Trip</button>
+    <button mat-raised-button class="secondary-btn" (click)="resetForm()">Cancel</button>
+</form>

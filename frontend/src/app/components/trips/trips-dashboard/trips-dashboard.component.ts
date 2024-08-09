@@ -37,13 +37,21 @@ export class TripsDashboardComponent implements OnInit {
   addTrip(newTrip: any) {
     this.tripService.createTrip(newTrip).subscribe({
       next: (trip) => {
-        this.trips.unshift(trip);
+        // this.trips.unshift(trip);
         this.isFormVisible = false;
         console.log('New trip has added: ', trip);
       },
       error: (error) => {
         console.error('Error creating trip:', error);
       }
+    });
+  }
+
+  removeTrip(id: number) {
+    console.log('Removing trip with id:', id);
+    this.tripService.deleteTrip(id).subscribe(() => {
+      this.trips = this.trips.filter(trip => trip.id !== id);
+      console.log('Updated trips:', this.trips);
     });
   }
 }

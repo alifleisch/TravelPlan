@@ -79,3 +79,26 @@ body {
         padding: 0.5rem 1rem;
     }
 }
+
+.trip-card {
+    position: relative;
+    border: 1px solid #ddd;
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+}
+
+.delete-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: none;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+
+    &:hover {
+        color: darkred;
+    }
+}

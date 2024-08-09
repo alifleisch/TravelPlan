@@ -16,6 +16,7 @@
     <div class="trips-grid">
         <div class="trip-card" *ngFor="let trip of trips">
             <h3>{{ trip.name }}</h3>
+            <button class="delete-button" (click)="removeTrip(trip.id)">✖</button>
             <p><strong>Location:</strong> {{ trip.location }}</p>
             <p><strong>Date:</strong> {{ trip.date }}</p>
         </div>

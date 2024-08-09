@@ -23,26 +23,27 @@ mat-form-field {
 
 button {
     margin-top: 1rem;
+    transition: 0.3s;
 
     &.primary-btn {
-        background-color: #6db45a !important;
+        background-color: #6db45a;
         color: white;
         box-shadow: 0px 3px 10px #505050;
     }
 
     &.primary-btn:hover {
-        background-color: #F2962F !important;
+        background-color: #F2962F;
         box-shadow: 1px 3px 20px #303030;
         transform: scale(1.01);
     }
 
     &.secondary-btn {
-        background-color: #cd391c !important;
+        background-color: #cd391c;
         color: white;
     }
 
     &.secondary-btn:hover {
-        background-color: #F2962F !important;
+        background-color: #F2962F;
         box-shadow: 1px 3px 20px #303030;
         transform: scale(1.01);
     }

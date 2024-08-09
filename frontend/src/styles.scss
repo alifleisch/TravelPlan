@@ -67,7 +67,8 @@ body {
 .secondary-btn:hover {
   background-color: #F2962F;
   color: white;
-  box-shadow: 1px 3px 10px #101000;
+  box-shadow: 1px 3px 20px #303030;
+  scale: 1.01;
 }
 
 @media (max-width: 768px) {
